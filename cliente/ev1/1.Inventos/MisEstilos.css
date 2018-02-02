@@ -1,0 +1,11 @@
+.MisEstilos {  }
+a:visited {  color: #00FF00; text-decoration: none}
+a:link {  color: #00FF00; text-decoration: none}
+a:hover {  color: #FF0000; text-decoration: underline}
+body {  background-color: #FFCC66}
+h2 {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #6666FF}
+p {  font-family: "Comic Sans MS"}
+body p a {
+}
+
+#ander {  color: #FFFFFF}

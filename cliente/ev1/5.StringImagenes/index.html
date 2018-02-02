@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+
+<script>
+	sCadena="Plaiaundi"
+	for(i=0;i<sCadena.length;i++){
+		l=sCadena[i].toUpperCase();
+		if(l>='A' && l<='Z'){
+			document.write('<img id="im'+i+'" src="Letras/'+l+'.gif" width="55" height="51" alt=""/>');	
+		}else{
+			if(l==' '){
+				document.write('<img id="im'+i+'" src="Letras/Vacio.gif" width="55" height="51" alt=""/>');
+			}else{
+				document.write('<img id="im'+i+'" src="Letras/Blanco.gif" width="55" height="51" alt=""/>');
+			}
+		}
+	}
+
+</script>
+
+
+
+</body>
+</html>

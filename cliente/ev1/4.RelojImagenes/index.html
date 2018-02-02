@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<script>
+
+	iFecha=setInterval(Fecha,500);
+	
+	function Fecha(){
+	dDate=new Date()
+	dS=dDate.getSeconds();
+	iX=dS%10;
+	dS=(dS-dS%10)/10;
+	document.getElementById("im6").src="Numeros/n"+iX+".gif"
+	iX=dS%10;
+	document.getElementById("im5").src="Numeros/n"+iX+".gif"
+
+	dM=dDate.getMinutes();
+	iX=dM%10;
+	dM=(dM-dM%10)/10;
+	document.getElementById("im4").src="Numeros/n"+iX+".gif"
+	iX=dM%10;
+	document.getElementById("im3").src="Numeros/n"+iX+".gif"
+	dH=dDate.getHours();
+	iX=dH%10;
+	dH=(dH-dH%10)/10;
+	document.getElementById("im2").src="Numeros/n"+iX+".gif"
+	iX=dH%10;
+	document.getElementById("im1").src="Numeros/n"+iX+".gif"
+	
+}
+</script>
+<div id="dReloj">
+<img id="im1" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+<img id="im2" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+ <img id="puntos" src="Numeros/puntos.jpg" width="62" height="73" alt=""/>
+ <img id="im3" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+ <img id="im4" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+ <img id="puntos2" src="Numeros/puntos.jpg" width="62" height="73" alt=""/>
+ 
+ 
+ <img id="im5" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+ <img id="im6" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+ </div>
+
+</body>
+</html>

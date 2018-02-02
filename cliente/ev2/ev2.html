@@ -5,16 +5,13 @@
 <title>Plaiaundi Trabajos</title>
 
 <!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bevan"/> -->
-<link href="miCss.css" rel="stylesheet" type="text/css" />
+<link href="../../miCss.css" rel="stylesheet" type="text/css" />
 
 <!-- Ultimo Bootsrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Bootsrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" />
-
 
 
 <style>
@@ -34,9 +31,6 @@
 	
     position: relative;
     display: inline-block;
-}
-#primeroAsignarutas{
-	margin-left:7%;
 }
 #primero{
 	margin-left:25%;
@@ -86,12 +80,14 @@
 <body background-color="#D5CCBD">
 <div id="cabecera">
 	<br/>
-	<span>Desarrollo de apliaciones Web</span>
+	<span>Desarrollo Web en Entorno Cliente</span>
+	
+	
 </div>
 <div id="fondo">
 		
 	<div class="dropdown" id="primero">
-		<a href="cliente/principal.html"><button class="dropbtn" >Desarrollo Web Cliente</button></a>
+		<a href="principal.html"><button class="dropbtn" >Desarrollo Web Cliente</button></a>
 		  <div class="dropdown-content">
 			<a href="#">Eval 1</a>
 			<a href="#">Eval 2</a>
@@ -119,39 +115,70 @@
 		  </div>
 	</div>
 	<br>
-	<br>    
+	<br>
+	
+    
     <div id="cajaContenedora">
     	<div class="product">
-        	<h1 id="primeroTitulo">Asignaturas</h1>
-            <div class="product_box" id="primeroAsignarutas">
+        	<h1 id="primeroTitulo">Evaluaciones</h1>
+            <div class="product_box" id="primero">
             	<div class="img_box"><span></span>
-	                <a href="cliente/principal.html"><img src="images/PaginaPrincipal/cliente.png" alt="image" /></a>
+	                <a href="productdetail.html"><img src="imagenes/js.png" alt="image" /></a>
 				</div>
-                <h2><a href="JS.html">Desarrollo web Cliente</a></h2>
-                <p class="price">Javascript, JQuery, Ajax...</p>
+                <h2><a href="productdetail.html">Primera evaluacion</a></h2>
+                <p class="price">Javascript</p>
+				<p> &nbsp;</p>
             </div>
             <div class="product_box">
                	<div class="img_box"><span></span>
-	                <a href="index.html"><img src="images/PaginaPrincipal/servidor.png" alt="image" /></a>
+	                <a href="productdetail.html"><img src="imagenes/jqa.png" alt="image" /></a>
 			  </div>
-                <h2><a href="index.html">Desarrollo Web Servidor</a></h2>
-                <p class="price">Php, Apache2, Laravel...</p>
+                <h2><a href="productdetail.html">Segunda Evaluacion</a></h2>
+                <p class="price">Ajax, JQuery</p>
             </div>
-			<div class="product_box">
+		</div>    
+        
+        
+        <hr>
+      
+        
+        <div class="product" >
+        	<h1 id="primero">Ejercicios interesantes</h1>
+            <div class="product_box" style="margin-left:7%;">
             	<div class="img_box"><span></span>
-	                <a href="index.html"><img src="images/PaginaPrincipal/despliegue.png" alt="image" /></a>
+	                <a href="productdetail.html"><img src="images/cliente/Portada/TrabajosInteresantes/cartas.jpg" alt="image" /></a>
 				</div>
-                <h2><a href="index.html">Despliegue de aplicaciones</a></h2>
-                <p class="price">Linux, Apache2, Struts...</p>
+                <h2><a href="productdetail.html">Procedimental 1</a></h2>
+                <p class="price">Juego: parejas de cartas</p>
             </div>
             <div class="product_box">
                	<div class="img_box"><span></span>
-	                <a href="index.html"><img src="images/PaginaPrincipal/diseño.png" alt="image" /></a>
-			  </div>
-                <h2><a href="index.html">Diseño de Interfaces</a></h2>
-                <p class="price">Html, Bootsrap, Css...</p>
+	                <a href="productdetail.html"><img src="images/cliente/Portada/TrabajosInteresantes/futbol.jpg" alt="image" /></a>
+				</div>
+                <h2><a href="productdetail.html">Procedimental 2</a></h2>
+                <p class="price">Resultados de futbol</p>
+				<p> &nbsp;</p>
+				
             </div>
-		</div>          
+            <div class="product_box">
+                <div class="img_box"><span></span>
+	                <a href="productdetail.html"><img src="images/product/03.jpg" alt="image" /></a>
+				</div>
+                <h2><a href="productdetail.html">Ejercicio x</a></h2>
+                <p class="price">Descripcion x</p>
+				<p> &nbsp;</p>
+            </div>
+            <div class="product_box">
+                <div class="img_box"><span></span>
+	                <a href="productdetail.html"><img src="images/product/04.jpg" alt="image" /></a>
+				</div>
+                <h2><a href="productdetail.html">Ejercicio Y</a></h2>
+                <p class="price">Descripcion Y </p>
+				<p> &nbsp;</p>
+				
+            </div>
+		</div>  
+            
         <div class="clear"></div>
     </div> <!-- Cerramos contenedor de trabajos -->
     <div id="tooplate_footer">

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>solucion</title>
+
+<script type="text/javascript" src="PreguntasVF.js"></script>
+<script type="text/javascript" src="http://88.2.227.247/funciones.js"></script>
+
+<style type="text/css">
+  #tPreguntas {font-family: Verdana;}
+  
+  #todo{
+	border:solid;
+	width:500px;  
+	font-size:120%;
+  }
+  
+</style>
+
+</head>
+
+<body onLoad="resultado()" style="margin: 400px 0 0 600px">
+
+	
+    <script>
+		iPreguntas=4;
+		function resultado(){
+			var sCookies=consultarCookie("respuestas");
+			document.write('<div id="todo">');
+			for(i=1;i<iPreguntas+1;i++){
+				if(sCookies[i]==0){
+					document.write('<div id="dPregunta'+i+'">');
+					document.write('<span id="tPreguntas" style="color:red">'+aPreguntas[i]+'</span>');
+					document.write('</div>');	
+				}else{
+					document.write('<div id="dPregunta'+i+'">');
+					document.write('<span id="tPreguntas" style="color:green">'+aPreguntas[i]+'</span>');
+					document.write('</div>');	
+				}
+			}
+			document.write('</div>');
+		}
+		
+	</script>
+    
+    
+</body>
+</html>

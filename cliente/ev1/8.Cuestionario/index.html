@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TestCultura</title>
+
+<script type="text/javascript" src="cuestionario/PreguntasVF.js"></script>
+<script type="text/javascript" src="http://88.2.227.247/funciones.js"></script>
+<style type="text/css">
+  .tPreguntas {font-family: Verdana;}
+  
+  #todo{
+	border:solid;
+	width:500px;  
+	font-size:120%;
+  }
+  body{
+	  margin: 400px 0 0 600px;
+	  }
+</style>
+
+</head>
+
+<body>
+	
+	<script>
+		
+		document.write('<div id="todo">');
+			for(i=1;i<5;i++){
+			document.write('<div id="dPregunta'+i+'">');
+				document.write('<input type="checkbox" id="cbCaja'+i+'">');
+				document.write('<span class="tPreguntas">'+aPreguntas[i]+'</span>');
+			document.write('</div>');
+			}
+		document.write('</div>');
+		
+		
+		function GuardarRespuestas(){
+			
+			var aRespuestas1 = "0101";
+			
+				
+			var aRespuestas2="";
+			var aRespuestas3="";
+				
+				for(i=1;i<5;i++){
+					if(document.getElementById("cbCaja"+i).checked){
+						aRespuestas2+="1";
+					}else{
+						aRespuestas2+="0";
+					}
+				}
+				
+				for(i=0;i<4;i++){
+					if(aRespuestas1[i]==aRespuestas2[i]){						
+						aRespuestas3+="1";
+					}else{
+						aRespuestas3+="0";
+					}
+				}		
+						
+				mandarCookie("respuestas", aRespuestas3);
+				window.location.assign("cuestionario/solucion.html")
+		}
+		document.write('<input type="button" onClick="GuardarRespuestas()">');
+		
+	</script>
+    
+    	
+    
+   
+
+</body>
+</html>

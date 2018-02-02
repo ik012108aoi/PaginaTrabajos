@@ -1,0 +1,113 @@
+<html>
+<head>
+
+<script type="text/javascript" src="http://88.2.227.247/funciones.js"></script>
+
+</head>
+
+<body>
+
+	<script>
+		n=4;
+		m=10;
+		bTerminado=false;
+		iContadorClicks=0;
+		iTemporizador=1000;
+		bEspera=false;
+		
+		tTablaCartas=CrearTablaCartas(n,m);
+		bCarta1=false;
+		aBoolean=[];
+		for(i=0;i<n;i++){
+			aBoolean[i]=[];
+			for(j=0;j<m;j++){
+				aBoolean[i][j]=false;
+			}
+		}
+		//document.write(tTablaCartas);
+		//document.write("<p>"+iTemporizador+"			"+iContadorClicks+"</p>");
+		
+		document.write('<p id="temporizador">1000</p>');
+		document.write('<p id="clicks">0</p>');
+		setInterval("temporizador()", 1000);
+		document.write("<table border='1'>");
+		for(i=0;i<n;i++){
+			document.write("<tr>");
+			for(j=0;j<m;j++){
+				document.write("<td>");
+				//document.write(tTablaCartas[i][j]);
+				
+				document.write("<img src='Baraja/0.png' id='pos"+i+","+j+"' width='50px' height='100px' onClick='cambiarFoto("+i+","+j+")'>");
+				document.write("</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+		function temporizador(){
+			iTemporizador--;
+			document.getElementById("temporizador").innerHTML=iTemporizador;
+		}
+		function aviso(){
+			alert("El juego ha terminado");	
+		}
+		
+		function volverCartas(fila1,col1, fila2,col2){
+			//tTablaCartas[fila2][col2].onClick=cambiarFoto(i,j);
+			document.getElementById("pos"+fila1+","+col1).src="Baraja/0.png";
+			document.getElementById("pos"+fila2+","+col2).src="Baraja/0.png";
+			bEspera=false;
+		}
+		
+		function cambiarFoto(fila, columna){
+			//alert("f"+fila+", c"+columna);
+			//tTablaCartas[fila][columna].onClick=null;
+			if(!bEspera){
+				if(!bTerminado){
+					iContadorClicks++;
+					document.getElementById("clicks").innerHTML=iContadorClicks;
+					document.getElementById("pos"+fila+","+columna).src="Baraja/"+tTablaCartas[fila][columna]+".png";
+					
+					if(bCarta1){
+						iCarta2=tTablaCartas[fila][columna];
+						if(iCarta1!=iCarta2){
+							bEspera=true;
+							setTimeout("volverCartas("+iFilaCarta1+","+iColCarta1+","+fila+","+columna+");",1000);					
+							
+							//DEVOLVER A LOS VALORES VACIOS
+							bCarta1=false;
+							
+						}else{
+							aBoolean[iFilaCarta1][iColCarta1]=true;
+							aBoolean[fila][columna]=true;
+							bCarta1=false;
+						}
+					}else{
+						iCarta1=tTablaCartas[fila][columna];
+						iFilaCarta1=fila;
+						iColCarta1=columna;
+						bCarta1=true;
+					}
+					
+					
+					for(i=0;i<n;i++){
+						for(j=0;j<m;j++){
+							if(!aBoolean[i][j]){
+								i=n;
+								j=m;
+							}else{
+								if(i==n-1 && j==m-1){
+									setTimeout("aviso()",1000);
+									bTerminado=true;
+								}
+							}						
+						}
+					}
+				}else{
+					alert('El juego esta terminado');	
+				}
+			}
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<div id="dNumeros">
+<img id="im1" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+<img id="im2" src="Numeros/n0.gif" width="102" height="98" alt=""/>
+<img id="im3" src="Numeros/n0.gif" width="102" height="98" alt=""/></div>
+
+<input id="tNumero" type="text">
+<!-- Boton que coge el valor de la caja de texto y inicia la ejecucion de la cuenta regresiva.-->
+<input id="bBoton" type="button" value="Iniciar" onClick="iniciar(iN)"> 
+
+
+
+<script>
+iX=1;
+iN=0;
+function iniciar(iX){ <!-- Esta funcion coge el valor de la caja de texto y se lo pasa a la variable n
+	<!--n coge el valor de la caja de texto con el id "tNumero"
+	iN=document.getElementById("tNumero").value;
+	<!-- le damos el valor de n a la variable z para mantener el valor original
+	iZ=iN;
+	
+	//NUMERO 3
+	
+	iX=iN%10; <!-- x coge el valor del resto de n/10
+	<!-- Concatenamos el valor de x a la ruta de la "im3" para que la imagen cambie
+	document.getElementById("im3").src="Numeros/n"+iX+".gif";
+	<!-- le restamos x a n y lo dividimos entre 10 para que el resto siga siendo de un digito
+	iN=(iN-iX)/10
+	//NUMERO 2
+	<!-- x coge el valor del resto de n/10
+	iX=iN%10;
+	<!-- Concatenamos el valor de x a la ruta de la "im3" para que la imagen cambie
+	document.getElementById("im2").src="Numeros/n"+iX+".gif";
+	<!-- Concatenamos el valor de x a la ruta de la "im3" para que la imagen cambie
+	iN=(iN-iX)/10;
+	//NUMERO 1
+	<!-- x coge el valor del resto de n/10
+	iX=iN%10;
+	<!-- Concatenamos el valor de x a la ruta de la "im3" para que la imagen cambie
+	document.getElementById("im1").src="Numeros/n"+iX+".gif";
+	
+	setInterval(disminuir,200); <!--Llamamos a la funcion "disminuir" cada 200 milisegundos
+}
+
+function disminuir(){  
+<!--Esta funcion reduce el valor de la variable z, que es el mismo valor que n, y saca los restos de ese numero para concatenarselos a la ruta de las imagenes, lo mismo que haciamos en la funcion iniciar, solo que esta vez al disminuir el numero lo hara continuamente
+	if(iZ>0){ <!-- evita que el numero pueda seguir bajando cuando llegue a 0
+	iZ--;
+	iE=iZ;
+	//NUMERO 3
+	iX3=iE%10; <!-- sacamos el resto de e entre 10 para concatenarselo
+	document.getElementById("im3").src="Numeros/n"+iX3+".gif";
+	
+	//NUMERO 2
+	iX2=((iE%100)-iE%10)/10; 
+	<!-- sacamos el resto del numero entre 100(para coger el segundo numero)restandole el resto del numero entre 10(para que el numero sea limpio) y lo dividimos entre 10 para que sea de un solo digito. (965%100)-(965%10)/10 = (65-5)/10 = 6-->
+	document.getElementById("im2").src="Numeros/n"+iX2+".gif";
+	
+	//NUMERO 1
+	iX1=((iE%1000)-iE%100)/100;
+	document.getElementById("im1").src="Numeros/n"+iX1+".gif";
+	}
+	
+}
+
+
+</script>
+
+</body>
+</html>

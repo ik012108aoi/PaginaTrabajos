@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<script>
+sCadena="Kaixo"
+var aArray = ["Blanco","Blanco","K", "A", "I", "X", "O", "Blanco", "Blanco"];	
+	
+	document.write('<div id="letras">')
+	
+	document.write('<img id="im1" src="Letras/'+aArray[0]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im2" src="Letras/'+aArray[1]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im3" src="Letras/'+aArray[2]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im4" src="Letras/'+aArray[3]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im5" src="Letras/'+aArray[4]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im6" src="Letras/'+aArray[5]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im7" src="Letras/'+aArray[6]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im8" src="Letras/'+aArray[7]+'.gif" width="55" height="51" alt=""/>')
+	document.write('<img id="im9" src="Letras/'+aArray[8]+'.gif" width="55" height="51" alt=""/>')
+	document.write('</div>')
+
+	var aArray = ["Blanco","Blanco","K", "A", "I", "X", "O", "Blanco", "Blanco"];
+	setInterval(Cambiar, 250)
+	c=0;
+
+	function Cambiar(){
+			
+			document.getElementById("im1").src="Letras/"+aArray[(0+c)%9]+".gif"
+			document.getElementById("im2").src="Letras/"+aArray[(1+c)%9]+".gif"
+			document.getElementById("im3").src="Letras/"+aArray[(2+c)%9]+".gif"
+			document.getElementById("im4").src="Letras/"+aArray[(3+c)%9]+".gif"
+			document.getElementById("im5").src="Letras/"+aArray[(4+c)%9]+".gif"
+			document.getElementById("im6").src="Letras/"+aArray[(5+c)%9]+".gif"
+			document.getElementById("im7").src="Letras/"+aArray[(6+c)%9]+".gif"
+			document.getElementById("im8").src="Letras/"+aArray[(7+c)%9]+".gif"
+			document.getElementById("im9").src="Letras/"+aArray[(8+c)%9]+".gif"
+			c++;
+			
+		
+	}
+
+
+</script>
+
+
+</body>
+</html>

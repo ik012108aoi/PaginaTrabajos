@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+#imgs{
+	
+}
+#imPaj1,#imPaj2,#imPaj3, #imPaj4, #imPaj5{
+	position: absolute;
+
+	left: 423px;
+	top: 350px;
+	//width: 63px;
+	//height: 65px;
+	 visibility: hidden;
+}
+h2{
+	color:#FF0004;
+}
+
+
+
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body>
+<h2>PAJAROS</h2>
+	<table border="1px" cellpadding="10px">
+    	<tr>
+        	<th><img src="EJ03 - Sellos/Pajaros/2134 - copia (2).jpg" width="160" height="114" alt=""/></th>
+            <th><img src="EJ03 - Sellos/Pajaros/2135 - copia.jpg" width="160" height="114" alt=""/></th>
+            <th><img src="EJ03 - Sellos/Pajaros/2136 - copia.jpg" width="114" height="160" alt=""/></th>
+            <th><img src="EJ03 - Sellos/Pajaros/2137 - copia.jpg" width="160" height="114" alt=""/></th>
+            <th><img src="EJ03 - Sellos/Pajaros/2138 - copia.jpg" width="114" height="160" alt=""/></th>
+            <th rowspan="2"><input name="button" type="button" id="bBorrar" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide')" value="Borrar"></th>
+        </tr>
+        <tr>
+        	<th><input name="button" type="button" id="bOrtega" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide');MM_showHideLayers('imPaj1','','show')" value="Ortega"></th>
+            <th><input name="button" type="button" id="bCigueña" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide');MM_showHideLayers('imPaj2','','show')" value="Cigüeña Negra"></th>
+            <th><input name="button" type="button" id="bRabilargo" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide');MM_showHideLayers('imPaj3','','show')" value="Rabilargo"></th>
+            <th><input name="button" type="button" id="bAguila" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide');MM_showHideLayers('imPaj4','','show')" value="Águila"></th>
+            <th><input name="button" type="button" id="bPato" onClick="MM_showHideLayers('imPaj1','','hide','imPaj2','','hide','imPaj3','','hide','imPaj4','','hide','imPaj5','','hide');MM_showHideLayers('imPaj5','','show')" value="Pato"></th>
+
+        </tr>
+    </table>
+<div id="imgs">
+    <img src="EJ03 - Sellos/Pajaros/2134.jpg" alt="" width="320" height="228" id="imPaj1"/>
+    <img src="EJ03 - Sellos/Pajaros/2135.jpg" alt="" width="320" height="228" id="imPaj2"/>
+    <img src="EJ03 - Sellos/Pajaros/2136.jpg" alt="" width="228" height="320" id="imPaj3"/>
+    <img src="EJ03 - Sellos/Pajaros/2137.jpg" alt="" width="320" height="227" id="imPaj4"/>
+    <img src="EJ03 - Sellos/Pajaros/2138.jpg" alt="" width="228" height="320" id="imPaj5"/>
+</div>  
+   
+</body>
+</html>
